@@ -1,0 +1,517 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+@font-face {
+    font-family: 'Argent-bold';
+    src: url('/fonts/argentcf-bold-webfont.woff2') format('woff2'),
+         url('/fonts/argentcf-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Argent-italic';
+    src: url('../fonts/argentcf-regularitalic-webfont.woff2') format('woff2'),
+         url('../fonts/argentcf-regularitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+$light-grey: #F4F3F3;
+$dark-grey: #E0E0E0;
+$darker-grey: #999999;
+html{
+  height: 100%;
+}
+body{
+  font-family: "Inconsolata",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  height: 100%;
+  font-size: 18px;
+}
+
+h1,h2{
+  font-family: 'Argent-bold', serif;
+  }
+h1{
+  font-size: 64px;
+  line-height: 80px;
+  & span{
+   font-family: 'Argent-italic', serif;
+  }
+}
+h2{
+  font-size: 28px;
+  line-height: 32px;
+  margin-bottom: 32px;
+  padding-top: 54px;
+}
+
+.header{
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+ul.list{
+  line-height: 34px;
+  li{
+    padding-left: 40px;
+    position: relative;
+    &:before{
+      display: block;
+      content: " ";
+      height: 6px;
+      width: 6px;
+      background: black;
+      border-radius: 3px;
+      position: absolute;
+      left:12px;
+      top:14px;
+    }
+  }
+}
+
+ul.menu{
+  li{
+    display: inline-block;
+    padding-right: 54px;
+    &.active{
+      font-weight: 700;
+    }
+  }
+}
+
+.content-all{
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  .column{
+    max-width: 600px;
+    margin: 60px auto 50px auto;
+  }
+  .column.bottom{
+    margin-top: auto;
+    margin-bottom: 120px;
+  }
+  .column.top{
+    margin-bottom: 120px;
+  }
+}
+
+p{
+  font-size: 1em;
+  max-width: 600px;
+  margin-bottom: 24px;
+  line-height: 1.5em;
+}
+
+b{
+  font-weight: 700;
+}
+
+table{
+  line-height: 34px;
+  td{
+    padding-right: 40px;
+  }
+}
+
+.invite_question{
+  margin-bottom: 10px;
+}
+
+
+.center-container {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.center-inner {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.language{
+  position: absolute;
+  top: 60px;
+  right:50px;
+}
+
+p a, ul a{
+  color:black;
+  text-decoration: none;
+  background-size: 1px 1em;
+  cursor: pointer;
+    box-shadow:
+    inset 0 -0.04em #000;
+  &:hover{
+    background-size: 1px 1em;
+    box-shadow:
+    inset 0 -0.07em #000;
+    display: inline;
+  }
+  &:hover, &:visited{
+    color: black;
+  }
+}
+
+.light{
+  opacity: .4;
+}
+
+.hide{
+  opacity: 0;
+  height: 0;
+  display: none;
+}
+
+.noshow{
+  opacity: 0;
+  height: 0;
+  display: none;
+}
+.invite_more{
+  font-size: 1rem;
+  color: $darker-grey;
+  line-height: 1.6;
+}
+
+.input_group{
+  input{
+    display: none;
+    &:checked + label{
+      border-color: black;
+    }
+  }
+  label{
+  }
+}
+
+.input{
+  font-size: 1em;
+  padding: 19px 30px;
+  padding-left: 12px;
+  font-family: Inconsolata;
+  border: 1px solid $light-grey;
+  border-radius: 2px;
+}
+
+select {
+    background: #fff;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 20px 16px;
+    background-position: calc(100% - 3px) 50%;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    font-size: 16px;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+.email{
+  padding: 20px 16px;
+  border: 1px solid black;
+  font-size: 16px;
+  border-radius: 2px;
+}
+
+
+
+.button{
+    cursor: pointer;
+  padding: 20px 30px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+  background: $light-grey;
+  border: none;
+  color:black;
+  border-radius: 3px;
+  display: inline-block;
+  text-decoration: none;
+  box-shadow: none;
+  &:hover{
+    background: $dark-grey;
+    color:black;
+  }
+
+  &.request{
+    margin-bottom: 12px;
+    width: 100%;
+    span{
+      float: right;
+      font-weight: 700;
+    }
+  }
+}
+
+.submit{
+  box-shadow: none;
+  border:none;
+  position: fixed;
+  right:50px;
+  bottom: 60px;
+  outline: none;
+}
+
+.attention{
+  text-align: right;
+}
+
+.not_coming{
+  margin-bottom: 0;
+  margin-top: 40px;
+}
+
+.coming, .plusone{
+  margin-top: 40px;
+}
+
+.question{
+  position: relative;
+&:before{
+  content: " ";
+  position: absolute;
+  left:-20px;
+  top:16px;
+  height: 2px;
+  width:10px;
+  background: black;
+}
+}
+
+.reqitem{
+  margin-bottom: 16px;
+  input,textarea,select{
+    box-sizing:border-box;
+    width: 100%;
+  }
+}
+
+input[type="text"]{
+  border: 1px solid black;
+  padding: 20px 16px;
+}
+
+.button{
+  font-size: 16px;
+}
+
+.error{
+      display: inherit;
+      margin-top: 8px;
+}
+
+
+textarea, input[type="text"]{
+  font-size: 16px;
+  border:1px solid black;
+  display: block;
+  height: initial;
+  line-height: 1.5;
+  max-height: none;
+  resize: none;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px 16px;
+  outline: none;
+  border-bottom: 1px solid #000;
+  font-family: "aktiv-grotesk",sans-serif;
+  font-weight: normal;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $darker-grey;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $darker-grey;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $darker-grey;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $darker-grey;
+}
+
+@media screen 
+  and (max-width: 800px) { 
+    p{
+      font-size: 1rem;
+      max-width: 400px;
+    }
+    .invite_more{
+      font-size: .8rem;
+    }
+    .button{
+      font-size: 1rem;
+      padding: 10px 24px;
+      margin-bottom: 4px;
+    }
+    .submit{
+      position: relative;
+      margin-top: 40px;
+      left:0;
+      bottom:0;
+      margin-bottom: 40px;
+      
+    }
+    input, textarea{
+        -webkit-appearance: none;
+        font-size: 1rem;
+      }
+      textarea{
+        border-radius: 0;
+      }
+    .question:before{
+      top:10px;
+      height:1px;
+    }
+    .content-all .column{
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+    .attention{
+      text-align: left;
+      margin-bottom: 10px;
+    }
+}
+
+.addeventatc, .addeventatc_dropdown span{
+  font-family: "aktiv-grotesk",sans-serif !important;
+}
+.copyx{
+  display: none !important;
+}
+
+.generated{
+  color: #448fea;
+}
+
+.generator{
+  p{
+    margin-top: 40px;
+  }
+}
+
+.bring{
+  p {
+    background: white;
+  }
+}
+
+.wear{
+  margin-top: 150px;
+  position: relative;
+}
+
+.inline-image{
+  max-width: 480px;
+  position: absolute;
+  top: -220px;
+  left: 340px;
+  z-index: -1;
+}
+
+
+.image-columns{
+  width: 100%;
+  display: flex;
+  .spacer{
+    width: 32px;
+  }
+  .image{
+    max-height: 400px;
+    display: inline-block;
+  }
+}
+
+.image.cousteau{
+  background-image: url(/images/cousteau.jpg);
+}
+.image.chill{
+  background-image: url(/images/relax.jpg);
+}
+
+
+.image.header{
+  background-image: url(/images/header.jpg);
+}
+
+.image.tent{
+  background-image: url(/images/tent.jpg);
+}
+
+.image{
+  margin-top: 0;
+  background-size: cover;
+  position: relative;
+  height: 80vh;
+  max-height: 800px;
+  display: block;
+  width: 100%;
+  h1{
+    color: white;
+  }
+}
+
+.directions {
+  margin-top: 80px;
+}
+
+

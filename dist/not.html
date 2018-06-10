@@ -1,0 +1,79 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&#128112;&#10084;&#129333;</title>
+  
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+   WebFontConfig = {
+    // typekit: { id: 'mgn0xoq' },
+    google: {
+      families: ['Inconsolata:400,700']
+    }
+  };
+
+  (function(d) {
+    var wf = d.createElement('script'), s = d.scripts[0];
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+    wf.async = true;
+    s.parentNode.insertBefore(wf, s);
+  })(document);
+</script>
+
+<script
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+
+
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+  <div class="content-all">
+    <div class="column top">
+      <a href="/gettingthere.html">< All times</a>
+      <p class="language"><a href="en.html">French</a></p>
+
+      <div class="header">
+        <h1><span>When are</span></h1>
+        <h1>you arriving?</h1>
+      </div>
+      
+
+      <h2></h2>
+      <p>If possible, please try to arrive at the <a  href="/gettingthere.html#boat">time slots we have arranged</a>. This makes it a lot easier for us to manage the trips. If not, no worries! Let us know when you will be arriving at the Marina below</p>
+      
+      <form action="" name="arrival">
+      <div class="reqitem">
+        <input required class="email" id="email" placeholder="Email address">
+      </div>
+      <div class="reqitem">
+        <input required type="text" id="arrivalTime" placeholder="When will you arrive at the Marina?">
+      </div>
+      <div class="reqitem">
+        <select required id="groupSize">
+          <option value="" disabled selected>How many are in your group, including you?</option>
+        </select>
+      </div>
+      <div class="reqitem">
+        <textarea required rows="2" id="names" placeholder="Please all the names of people in your group, including yours"></textarea>
+      </div>
+      <button class="button" type="submit">Reserve the boat!</button>
+    </form>
+
+    </div>
+  </div>
+
+
+  <script src="js/main.min.js"></script>
+
+</body>
+</html>

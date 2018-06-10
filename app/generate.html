@@ -1,0 +1,84 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&#128112;&#10084;&#129333;</title>
+  
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+   WebFontConfig = {
+    typekit: { id: 'mgn0xoq' },
+  };
+
+  (function(d) {
+    var wf = d.createElement('script'), s = d.scripts[0];
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+    wf.async = true;
+    s.parentNode.insertBefore(wf, s);
+  })(document);
+</script>
+
+<script
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+
+
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+  <div class="content-all">
+    <div class="column top generator">
+      <p class="light">Link generator</p>
+      <p class="generated"></p>
+
+      <p>Name</p>
+      <input type="text" id="name" name="name" class="name" placeholder="Name on invite (don't use the & symbol)">
+
+      <p>Email</p>
+      <input type="text" id="email" name="email" class="email" placeholder="Email address">
+      
+      <p>Plus one?</p>
+      <div class="input_group">
+        <input class="plus_one" type="radio" id="plus_yes" name="plus_one" value="1">
+        <label class="button" for="plus_yes">Yes</label>
+        <input class="plus_one" type="radio" id="plus_no" name="plus_one" value="0" checked>
+        <label class="button" for="plus_no">No</label>
+      </div>
+
+      <p>Langugae</p>
+      <div class="input_group">
+        <input class="language" type="radio" id="lang_fr" name="language" value="FR">
+        <label class="button" for="lang_fr">French</label>
+        <input class="language" type="radio" id="lang_en" name="language" value="EN" checked>
+        <label class="button" for="lang_en">English</label>
+      </div>
+    </div>
+  </div>
+
+  <p class="not_coming hide">&#9760; Boo, t’es nul.<br><br>
+   On rigole. On t’aime quand même mais tu vas rater le party du siècle. 
+ </p>
+
+
+ <div class="submit">
+  <p class="attention hide">Clique &#x2193;</p>
+  <div class="button generate">Generate</div>
+</div>
+</div>
+</div>
+
+<!--build:js js/main.min.js -->
+<script src="js/lib/autosize.min.js"></script>
+<script src="js/main.js"></script>
+<!-- endbuild -->
+
+</body>
+</html>

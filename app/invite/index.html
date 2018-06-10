@@ -1,0 +1,106 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&#128112;&#10084;&#129333;</title>
+  
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+   WebFontConfig = {
+    typekit: { id: 'mgn0xoq' },
+  };
+
+  (function(d) {
+    var wf = d.createElement('script'), s = d.scripts[0];
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+    wf.async = true;
+    s.parentNode.insertBefore(wf, s);
+  })(document);
+</script>
+
+<script
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+
+
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+  <div class="content-all">
+    <div class="column top">
+      <p class="light">Save the date</p>
+      <p class="language"><a href="invite.html">English</a></p>
+      <p>Vanessa & Willem &#128112;&#128150;&#129333;</p>
+
+      <p>Samedi 1er Septembre 2018<br />
+        <a href="https://www.google.ca/maps/place/Wahsoune+Island/@45.1640493,-80.1027564,15z/" target="_blank">Wahsoune Island, Georgian bay, Ontario</a>
+      </p>
+    </div>
+    <div class="column bottom">
+        <p class="invite_question question">
+          Donc,<span class="invited_name"></span>, <span class="tu">est ce que tu viens pour le week-end?</span><span class="vous">est ce que vous venez pour le week-end?</span>
+        </p>
+        <p class="invite_more"><span class="tu">T’inquiètes! Il y aura de la place pour dormir. On a loué un 2ème chalet et pour les plus téméraires, il y aura peut-être même un voilier-couchette. Si tu veux venir plus tôt (voir la semaine complète qui précède le mariage), c’est possible! Laisse-nous savoir. Tu peux rester jusqu’au lundi 3 Septembre (salut à toi congé de la fête du travail). Si t’es le genre à aimer dormir dans une tente et profiter du son relaxant de la nature la nuit pendant que tu regardes les étoiles, dis le nous!</span><span class="vous hide">Pas de stress !! Il y aura de la place pour dormir. On a loué un 2ème chalet et pour les plus téméraires, il y aura peut-être même un voilier-couchette. Si vous voulez venir plus tôt (voir la semaine complète qui précède le mariage), c’est possible! Laissez-nous savoir. Vous pouvez rester jusqu’au lundi 3 Septembre (salut à toi congé de la fête du travail). Si vous êtes le genre à aimer dormir dans une tente et profiter du son relaxant de la nature la nuit pendant que vous regardez les étoiles, dites-le nous!</span>
+        </p>
+
+      <form action="https://formspree.io/xdeykgom" method="POST"> 
+        <input type="text" name="_gotcha" style="display: none"> 
+        <input type="hidden" name="_next" value="http://104.236.30.164/success_fr.html" />
+        <input class="email_address" name="_replyto" type="hidden" id="email_address">
+        <input class="user_name" name="name" type="hidden" id="user_name">
+        <input type="hidden" name="_language" value="fr" />
+
+        <div class="input_group">
+          <input type="radio" id="coming_yes" name="coming_to_wedding" value="yes" required>
+          <label class="button" for="coming_yes">Oui</label>
+          <input type="radio" id="coming_no" name="coming_to_wedding" value="no" required>
+          <label class="button" for="coming_no">Non</label>
+        </div>
+
+        <div class="coming hide">
+          <p class="success question">
+           <span class="tu">&#129412; YOUPI! Nous avons besoin de ton adresse pour t’envoyer une invitation formelle.</span>
+           <span class="vous hide">&#129412; YOUPI! Nous avons besoin de votre adresse postale pour vous envoyer une invitation formelle.</span>
+         </p>
+         <textarea id="address" name="address" class="address" placeholder="Adresse pour carte et cadeaux"></textarea>
+
+         <div class="plusone hide question">
+          <p>&#129335; Est-ce que tu comptes venir avec quelqu’un? (amoureux seulement, désolé ton meilleur ami n’est pas invité) </p>
+
+          <div class="input_group">
+            <input class="plus_one" type="radio" id="plus_yes" name="plus_one" value="yes">
+            <label class="button" for="plus_yes">Oui.</label>
+            <input class="plus_one" type="radio" id="plus_no" name="plus_one" value="no">
+            <label class="button" for="plus_no">Euh non, célibataire life!</label>
+          </div>
+        </div>
+      </div>
+
+      <p class="not_coming hide tu">
+        <span class="tu">&#9760; Boo, t’es nul.<br><br>On rigole. On t’aime quand même mais tu vas rater le party du siècle. </span>
+        <span class="vous hide">&#9760; Boo, vous êtes nuls.<br><br>On rigole. On vous aime quand même mais vous allez rater le party du siècle.</span>
+      </p>
+
+      <div class="submit">
+        <p class="attention hide">Clique &#x2193;</p>
+        <input class="button" type="submit" value="Soumettre">
+      </div>
+    </form>
+  </div>
+</div>
+
+<!--build:js js/main.min.js -->
+<script src="js/lib/autosize.min.js"></script>
+<script src="js/main.js"></script>
+<!-- endbuild -->
+
+</body>
+</html>

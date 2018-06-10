@@ -1,0 +1,76 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&#128112;&#10084;&#129333;</title>
+  
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+   WebFontConfig = {
+    // typekit: { id: 'mgn0xoq' },
+    google: {
+      families: ['Inconsolata:400,700']
+    }
+  };
+
+  (function(d) {
+    var wf = d.createElement('script'), s = d.scripts[0];
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+    wf.async = true;
+    s.parentNode.insertBefore(wf, s);
+  })(document);
+</script>
+
+<script
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+
+
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+  <div class="content-all">
+    <div class="column top">
+      <a href="/gettingthere.html">< All times</a>
+      <p class="language"><a href="en.html">French</a></p>
+
+      <div class="header">
+        <h1><span id="time"></span></h1>
+        <h1 id="date">on the boat</h1>
+      </div>
+      
+
+      <h2>Reserve a spot on the boat</h2>
+      <p>There are <span class="spotsLeft"></span> spots available</p>
+      
+      <form action="" name="request">
+        <div class="reqitem">
+          <input class="email" id="email" placeholder="Email address">
+        </div>
+        <div class="reqitem">
+          <select required id="selectCount" class="selectCount">
+            <option value="" disabled selected>How many are in your group, including you?</option>
+          </select>
+        </div>
+        <div class="reqitem">
+          <textarea required id="party" rows="2" placeholder="Please all the names of people in your group, including yours"></textarea>
+        </div>
+
+        <button class="button" type="submit">Reserve the boat!</button>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="js/main.min.js"></script>
+
+</body>
+</html>
